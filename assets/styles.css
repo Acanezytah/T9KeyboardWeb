@@ -33,15 +33,24 @@ body {
     background-image: url('images/telefono.png');
     background-repeat: no-repeat;
     background-size: 300px;
-    width: 525px;
-    height: 1438px;
+    width: 300px;
+    height: 825px;
 }
 
 .pantalla {
     width: 54%;
     height: 30.5%;
-    padding-left: 11%;
-    padding-top: 17.5%;
+    margin-left: 11%;
+    margin-top: 20.6%;
+}
+
+#pantallaTexto {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .pantallaArriba {
@@ -62,124 +71,185 @@ body {
 
 .teclado {   
     width: 100%;
-    height: 60%;
-    margin-top: 34.57%;
+    height: 50%;
+    margin-top: 32%;
+    padding-right: 22%;
+    
 }
 
 .teclado button {
-    appearance: none;
+    width: 63px;
+    height: 30px;
+    padding: 0;
+    background: transparent;
     border: none;
-    background-color: transparent;
 }
+
+.teclado button img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ----------------------------------------- */
+
+.fila1, .fila2, .fila3, .fila4, .fila5, .fila6 {
+    display: flex;
+
+}
+
+/* ----------------------------------------- */
+
+.fila2 button,
+.fila3 button,
+.fila4 button,
+.fila5 button,
+.fila6 button {
+    width: 70px;   
+    height: 40px;
+    
+} 
 
 /* ----------------------------------------- */
 
 .fila1 {
-    display: flex;
-    margin: 23% 9.7%;
+    padding-top: 6px;
+    margin-left: 12%;
+    height: 35px;
 }
 
 #Up2 {
-  margin: -1.5%;
-  padding-top: 1%; 
+    margin-left: -4%;
 }
 
 #Up3 {
-  margin: -0.4%;
+    margin-left: -4%;
 }
 
 /* ----------------------------------------- */
 
+.fila2 button img{
+    width: 95%;
+    height: 95%;
+}
 .fila2 {
-    display: flex;
-    margin: 10.6% 8%;
+    margin-top: 2.5%;
+    margin-left: 8%;
 }
 
 #b {
-  margin: -0.4%;
-  padding-bottom: 0.6%;
+    margin-left: -3.5%;
 }
 
 #c {
-  margin: -0.5%;
-  padding-bottom: 0.6%;
+    margin-left: -5%;
 }
-
 /* ----------------------------------------- */
 
-.fila3 {
-    display: flex;
-    margin: -10.25% 7.8%;
-    align-items: flex-start;
+.fila3 button img{
+    width: 95%;
+    height: 95%;
 }
 
-#uno {
-    padding-top: 1.1%;;
+.fila3 {
+    margin-top: 1.3%;
+    margin-left: 8%;
 }
 
 #dos {
-    margin: -0.5%;
-    padding-top: 1.8%;
+    margin-left: -3%;
 }
 
 #tres {
-    padding-top: 0.8%;
-    margin-left: -0.1%;
+    margin-left: -5%;
+    margin-top: -.5%;
 }
 
 /* ----------------------------------------- */
 
+.fila4 button img{
+    width: 100%;
+    height: 100%;
+}
+
 .fila4 {
-    display: flex;
-    margin: 11.3% 7%;
-    align-items: flex-start; 
+    margin-top: 1.3%;
+    margin-left: 8%;
 }
 
 #cinco {
-    margin-left: -0.8%;
+    margin-left: -3.5%;
 }
 
 #seis {
-    margin-top: -0.5%;
-    margin-left: -0.6%;
+    margin-left: -3.5%;
+    margin-top: -.5%;
 }
 
 /* ----------------------------------------- */
 
+.fila5 button img{
+    width: 105%;
+    height: 105%;
+}
+
 .fila5 {
-    display: flex;
-    margin: -10.2% 6.7%;
-    align-items: flex-start; 
+    margin-top: 2%;
+    margin-left: 7%;
 }
 
 #ocho {
-    margin-left: -0.2%;
-    margin-top: -0.1%;
+    margin-left: -3%;
 }
 
 #nueve {
-    margin-left: -0.3%;
-    margin-top: -0.4%;
+    margin-left: -3%;
+    margin-top: -.5%;
 }
 
 /* ----------------------------------------- */
 
+.fila6 button img{
+    width: 105%;
+    height: 105%;
+}
+
 .fila6 {
-    display: flex;
-    margin: 11.2% 6%;
-    align-items: flex-start; 
+    margin-top: 3%;
+    margin-left: 6.5%;
 }
 
 #cero {
-    margin-left: -0.1%;
+    margin-left: -2.5%;
 }
 
 #f {
-    margin-top: -0.5%;
-    margin-left: -0.2%;
+    margin-left: -2.5%;
+    margin-top: -.6%;
 }
 
 /* ----------------------------------------- */
+
+.rueda button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rueda button img {
+  width: 75px;   /* Un poco más pequeño que la celda para que no se peguen */
+  height: 75px;
+  object-fit: contain;
+  display: block;
+}
 
 .rueda {
   display: grid;
@@ -187,37 +257,65 @@ body {
     ".    up    ."
     "left center right"
     ".   down   .";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 2%;  
-  height: 1%;
-  gap: 1%;
+  grid-template-columns: 40px 40px 40px; /* Ajusta el tamaño aquí */
+  grid-template-rows: 40px 40px 40px;
+  gap: 2px; /* Muy poco espacio entre botones */
+  width: 124px;  /* 3 columnas de 40px + 2 gaps de 2px */
+  height: 100px; /* 3 filas de 40px + 2 gaps de 2px */
+  margin: 0 auto; /* Centra la rueda */
+  background: transparent;
+  position: relative;
 }
 
-#up     { 
-    grid-area: up; 
-    margin-top: -107%;
-    margin-left: 40.5%;
+#up     { grid-area: up;
+padding-left: 8%;
+padding-top: 8%;
+}  
+
+#up img {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
 }
-#down   { 
-    grid-area: down; 
-    margin-top: -39%;
-    margin-left: 38%;
+
+#down   { grid-area: down; 
+padding-right: 2.5%;
+padding-bottom: 96.5%;}
+
+#down img {
+  width: 81px;
+  height: 81px;
+  object-fit: contain;
 }
-#left   { 
-    grid-area: left; 
-    margin-top: -142%;
-    margin-left: 147%;
+
+#left   { grid-area: left; 
+padding-left: 30%;
+padding-bottom: 46.6%;}
+
+#left img {
+  width: 73px;
+  height: 73px;
+  object-fit: contain;
 }
-#right  { 
-    grid-area: right; 
-    margin-top: -110%;
-    
+
+#right  { grid-area: right;
+padding-right: 53%;
+padding-bottom: 16%;}
+
+#right img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
 }
-#center { 
-    grid-area: center; 
-    margin-top: -74%;
-    margin-left: 52%;
+
+#center { grid-area: center;
+padding-bottom: 50%;
+padding-right: 10%;}
+
+#center img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 
 
