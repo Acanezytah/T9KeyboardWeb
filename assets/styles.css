@@ -14,9 +14,15 @@
     src: url("fonts/hg-gothic-e.ttf") format('truetype');
 }
 
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
 body {
     font-family: "ghotic", sans-serif;
-    background-color: #f0f0f0;
+    background-color: #dbf1ea;
     margin: 0;
     padding: 20px;
 }
@@ -122,6 +128,14 @@ body {
     object-fit: contain;
     display: block;
     margin: 0 auto;
+}
+
+.teclado button:active {
+  transform: scale(0.9);        
+  background-color: rgba(0,0,0,0.1); 
+  box-shadow: 0 0 10px #4cafef; 
+  border-radius: 10px;
+  transition: all 0.1s;
 }
 
 
