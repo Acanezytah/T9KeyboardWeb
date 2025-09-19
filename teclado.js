@@ -232,7 +232,7 @@ const centerBtn = document.getElementById('center');
 
 // Lista de apartados en orden
 const apartados = ["para", "sub", "pantalla"];
-let apartadoIndex = 2; // empiezas en "pantalla" (índice 2)
+let apartadoIndex = 2; // empieza en "pantalla" (índice 2)
 let apartadoActual = apartados[apartadoIndex];
 
 function cambiarApartado(nuevoIndex) {

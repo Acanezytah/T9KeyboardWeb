@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-    // Hacemos esta función global para poder llamarla desde numpad.js
+    // función global para poder llamarla desde numpad.js
     window.reproducirNota = (frecuencia) => {
         if (audioCtx.state === "suspended") {
             audioCtx.resume();

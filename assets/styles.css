@@ -351,7 +351,7 @@ button.presionado {
   bottom: 5px;
   left: -7px;
   right: -2px;
-  pointer-events: auto; /* <-- necesario */
+  pointer-events: auto; 
 }
 
 .rueda {
@@ -360,11 +360,11 @@ button.presionado {
     ".    up    ."
     "left center right"
     ".   down   .";
-  grid-template-columns: 40px 40px 40px; /* Ajusta el tamaño aquí */
+  grid-template-columns: 40px 40px 40px; 
   grid-template-rows: 40px 40px 40px;
   gap: 2px; /* Muy poco espacio entre botones */
-  width: 124px;  /* 3 columnas de 40px + 2 gaps de 2px */
-  height: 100px; /* 3 filas de 40px + 2 gaps de 2px */
+  width: 124px;  
+  height: 100px; 
   margin: 0 auto; /* Centra la rueda */
   background: transparent;
   position: relative;
